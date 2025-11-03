@@ -8,9 +8,13 @@ import plotly.figure_factory as ff
 
 
 
+diri = os.getcwd()
 
-df = pd.read_csv('C:/Users/HP/Desktop/olympic project/athlete_events.csv')
-regions_df = pd.read_csv('C:/Users/HP/Desktop/olympic project/regions.csv')
+
+
+df = pd.read_csv(os.path.join(diri, 'athlete_events.csv'))
+regions_df = pd.read_csv(os.path.join(diri, 'regions.csv'))
+
 
 df = preprocessor.preprocess(df,regions_df)
 st.sidebar.title("Olympic analysis")
@@ -209,5 +213,6 @@ if user_menu == 'Athlete wise Analysis':
     
 
     
+
 
     
